@@ -1,0 +1,47 @@
+ import java.util.Scanner;
+public class Atividade{
+    
+     public static void main(String args[]) {  
+   
+        Scanner teclado = new Scanner(System.in);
+        
+        int quantidade;
+        int i = 0,qtde;
+        double menor = 100;
+        double maior=0;
+        
+        System.out.print("Por favor insira a quantidade de repeticoes:\n");
+        
+        quantidade = teclado.nextInt();
+        
+        Double[] numeros = new Double[quantidade];
+        
+        for( i = 0; i < quantidade; i++){
+            numeros[i] = teclado.nextDouble();
+        }
+        
+        for( i = 0; i < quantidade; i++){
+             System.out.printf("Numero: %f", numeros[i]);
+        }
+         System.out.println("o número maior é:");
+        
+         for( i = 0; i < quantidade; i ++){
+            if(numeros[i] < menor){
+                menor = numeros[i];
+            }
+        }
+          System.out.printf("O menor numero e: %f\n",menor);
+
+        
+         for(i = 0; i < quantidade; i ++){      
+            if(numeros[i] > maior){
+                 maior = numeros[i];
+            }
+        }
+        System.out.printf("O maior numero e: %f\n",maior);
+        
+
+       
+   System.exit(0);
+  }
+}
